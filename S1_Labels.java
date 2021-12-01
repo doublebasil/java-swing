@@ -9,16 +9,17 @@ public class S1_Labels {
 }
 
 public class guiClass {
+	// Initialise variables
 	private JFrame mainFrame;
 	private JLabel label1;
 	private JLabel label2;
 
 	// Constructor
 	public guiClass() {
-		mainFrame = new JFrame("Swing!");
+		mainFrame = new JFrame("Swing!");			// Title of window
 		mainFrame.setSize(400,400);
-		mainFrame.setLayout(new GridLayout(2,1)); // Height by Width
-		
+		mainFrame.setLayout(new GridLayout(2,1)); 	// Height by Width
+		// Make the program know what to do when you close the window
 		mainFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
 				System.exit(0);

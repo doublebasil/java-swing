@@ -15,7 +15,8 @@ public class guiClass {
     private JLabel label3;
     public guiClass() {
         root = new JFrame("Text color");
-        root.setLayout(new GridLayout(3,1));
+        root.setLayout(new GridLayout(3,1));        // Height by Width
+        // Tell the program what to do when the window is closed
         root.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
 				System.exit(0);
