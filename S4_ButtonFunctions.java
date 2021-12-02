@@ -10,7 +10,9 @@ public class S4_ButtonFunctions {
 
 public class guiClass {
     private JFrame groot;
-    private JLabel glabel;
+    // The label must be static so that a static function ButtonFunction can
+    // change it's text. Static and non-static things are a whole other kettle of fish
+    private static JLabel glabel;
     private JButton gbutton;
 
     private static boolean state = true;
@@ -30,7 +32,7 @@ public class guiClass {
         gbutton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("The button was pressed");
-                guiClass.buttonFunction();
+                buttonFunction();
             }
         });
 
@@ -39,7 +41,7 @@ public class guiClass {
         groot.setSize(200, 200);
         groot.setVisible(true);
     }
-    public void buttonFunction() {
+    public static void buttonFunction() {
         if (state == true) {
             glabel.setText("Hello");
             state = false;
